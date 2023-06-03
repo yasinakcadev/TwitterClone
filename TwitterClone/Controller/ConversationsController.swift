@@ -13,7 +13,7 @@ class ConversationController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        view.backgroundColor = .systemOrange
     }
     
     //MARK: - Helpers

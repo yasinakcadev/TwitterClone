@@ -13,7 +13,7 @@ class ExploreController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .systemBlue
     }
     
     //MARK: - Helpers
