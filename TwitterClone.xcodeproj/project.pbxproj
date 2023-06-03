@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC33BBF52A2B22DE00340544 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC33BBF42A2B22DE00340544 /* FeedController.swift */; };
+		EC33BBF72A2B236B00340544 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC33BBF62A2B236B00340544 /* ExploreController.swift */; };
+		EC33BBF92A2B23A600340544 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC33BBF82A2B23A600340544 /* NotificationsController.swift */; };
+		EC33BBFB2A2B23DC00340544 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC33BBFA2A2B23DC00340544 /* ConversationsController.swift */; };
 		ECBD7B162A2A983300A9BA9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD7B152A2A983300A9BA9F /* AppDelegate.swift */; };
 		ECBD7B182A2A983300A9BA9F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD7B172A2A983300A9BA9F /* SceneDelegate.swift */; };
 		ECBD7B1D2A2A983300A9BA9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBD7B1B2A2A983300A9BA9F /* Main.storyboard */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC33BBF42A2B22DE00340544 /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		EC33BBF62A2B236B00340544 /* ExploreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
+		EC33BBF82A2B23A600340544 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
+		EC33BBFA2A2B23DC00340544 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		ECBD7B122A2A983300A9BA9F /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBD7B152A2A983300A9BA9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECBD7B172A2A983300A9BA9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				ECBD7B4B2A2A989E00A9BA9F /* MainTabbarController.swift */,
+				EC33BBF42A2B22DE00340544 /* FeedController.swift */,
+				EC33BBF62A2B236B00340544 /* ExploreController.swift */,
+				EC33BBF82A2B23A600340544 /* NotificationsController.swift */,
+				EC33BBFA2A2B23DC00340544 /* ConversationsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -306,8 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC33BBF92A2B23A600340544 /* NotificationsController.swift in Sources */,
+				EC33BBFB2A2B23DC00340544 /* ConversationsController.swift in Sources */,
 				ECBD7B162A2A983300A9BA9F /* AppDelegate.swift in Sources */,
+				EC33BBF72A2B236B00340544 /* ExploreController.swift in Sources */,
 				ECBD7B182A2A983300A9BA9F /* SceneDelegate.swift in Sources */,
+				EC33BBF52A2B22DE00340544 /* FeedController.swift in Sources */,
 				ECBD7B4C2A2A989E00A9BA9F /* MainTabbarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
