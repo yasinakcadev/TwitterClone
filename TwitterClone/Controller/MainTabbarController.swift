@@ -9,17 +9,29 @@ import UIKit
 
 class MainTabbarController: UITabBarController {
     //MARK - Properties
+    let actionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.tintColor = .white
+        button.backgroundColor = .blue
+        button.setImage(UIImage(named: "new_tweet"), for: .normal)
+        return button
+    }()
 
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemPink
         configureViewControllers()
-        //uiTabBarSetting()
+        uiTabBarSetting()
+        configureUI()
     }
     
     //MARK: - Helpers
+    func configureUI() {
+        view.addSubview(actionButton)
+        actionButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingBottom: 64, paddingRight: 16)
+        actionButton.layer.cornerRadius = 56 / 2
+    }
+    
     func configureViewControllers() {
         let feed = FeedController()
         let nav1 = templateNavigationController(image: UIImage(named: "home_unselected"), rootViewController: feed)
