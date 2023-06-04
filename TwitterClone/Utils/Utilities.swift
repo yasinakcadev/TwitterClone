@@ -33,7 +33,7 @@ class Utilities {
         let textField = UITextField()
         textField.textColor = .white
         textField.font = UIFont.systemFont(ofSize: 16)
-        textField.attributedPlaceholder  = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        textField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
         return textField 
     }
     

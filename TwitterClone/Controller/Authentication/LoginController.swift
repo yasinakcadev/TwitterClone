@@ -17,19 +17,6 @@ class LoginController: UIViewController {
         return imageView
     }()
     
-    private lazy var emailContainerView: UIView = {
-        let image = UIImage(named: "ic_mail_outline_white_2x-1")
-        let view = Utilities.inputContainerView(withImage: image, textField: emailTextField)
-
-        return view
-    }()
-    
-    private lazy var passwordContainerView: UIView = {
-        let image = UIImage(named: "ic_lock_outline_white_2x")
-        let view = Utilities.inputContainerView(withImage: image, textField: passwordTextField)
-        return view
-    }()
-    
     private var emailTextField: UITextField = {
         let textField = Utilities.textField(with: "Email")
         return textField
@@ -41,8 +28,20 @@ class LoginController: UIViewController {
         return textField
     }()
     
+    private lazy var emailContainerView: UIView = {
+        let image = UIImage(named: "ic_mail_outline_white_2x-1")
+        let view = Utilities.inputContainerView(withImage: image, textField: emailTextField)
+        return view
+    }()
+    
+    private lazy var passwordContainerView: UIView = {
+        let image = UIImage(named: "ic_lock_outline_white_2x")
+        let view = Utilities.inputContainerView(withImage: image, textField: passwordTextField)
+        return view
+    }()
+    
     private var loginButton: UIButton = {
-       let button = UIButton()
+        let button = UIButton()
         button.backgroundColor = .white
         button.setTitle("Login", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
@@ -62,7 +61,9 @@ class LoginController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()    }
+        configureUI()
+        navigationController?.navigationBar.isHidden = true
+    }
     
     //MARK: - Selectors
     @objc func handleLogin() {
@@ -70,7 +71,7 @@ class LoginController: UIViewController {
     }
     
     @objc func handleShowSignUp() {
-        print("sign up")
+        navigationController?.pushViewController(RegistrationController(), animated: true)
     }
     
     //MARK: - Helpers
@@ -92,8 +93,8 @@ class LoginController: UIViewController {
         
         view.addSubview(dontHaveAccountButton)
         dontHaveAccountButton.anchor(left: view.leftAnchor,
-                                bottom: view.safeAreaLayoutGuide.bottomAnchor,
-                                right: view.rightAnchor,
+                                     bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                     right: view.rightAnchor,
                                      paddingLeft: 40,
                                      paddingRight: 40)
     }
