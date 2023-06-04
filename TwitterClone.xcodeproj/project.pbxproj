@@ -21,6 +21,9 @@
 		ECBD7B372A2A983600A9BA9F /* TwitterCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD7B362A2A983600A9BA9F /* TwitterCloneUITests.swift */; };
 		ECBD7B392A2A983600A9BA9F /* TwitterCloneUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD7B382A2A983600A9BA9F /* TwitterCloneUITestsLaunchTests.swift */; };
 		ECBD7B4C2A2A989E00A9BA9F /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBD7B4B2A2A989E00A9BA9F /* MainTabbarController.swift */; };
+		ECDA88D42A2C5DD30065CC36 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA88D32A2C5DD30065CC36 /* LoginController.swift */; };
+		ECDA88D62A2C5DE10065CC36 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA88D52A2C5DE10065CC36 /* RegistrationController.swift */; };
+		ECDA88D82A2C807C0065CC36 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDA88D72A2C807C0065CC36 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		ECBD7B362A2A983600A9BA9F /* TwitterCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCloneUITests.swift; sourceTree = "<group>"; };
 		ECBD7B382A2A983600A9BA9F /* TwitterCloneUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCloneUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ECBD7B4B2A2A989E00A9BA9F /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		ECDA88D32A2C5DD30065CC36 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		ECDA88D52A2C5DE10065CC36 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		ECDA88D72A2C807C0065CC36 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +172,7 @@
 		ECBD7B482A2A985300A9BA9F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ECDA88D22A2C5DC50065CC36 /* Authentication */,
 				ECBD7B4B2A2A989E00A9BA9F /* MainTabbarController.swift */,
 				EC33BBF42A2B22DE00340544 /* FeedController.swift */,
 				EC33BBF62A2B236B00340544 /* ExploreController.swift */,
@@ -186,8 +193,18 @@
 			isa = PBXGroup;
 			children = (
 				EC33BC042A2B567000340544 /* Extensions.swift */,
+				ECDA88D72A2C807C0065CC36 /* Utilities.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		ECDA88D22A2C5DC50065CC36 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				ECDA88D32A2C5DD30065CC36 /* LoginController.swift */,
+				ECDA88D52A2C5DE10065CC36 /* RegistrationController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,6 +342,9 @@
 				EC33BBFB2A2B23DC00340544 /* ConversationsController.swift in Sources */,
 				ECBD7B162A2A983300A9BA9F /* AppDelegate.swift in Sources */,
 				EC33BC052A2B567000340544 /* Extensions.swift in Sources */,
+				ECDA88D42A2C5DD30065CC36 /* LoginController.swift in Sources */,
+				ECDA88D62A2C5DE10065CC36 /* RegistrationController.swift in Sources */,
+				ECDA88D82A2C807C0065CC36 /* Utilities.swift in Sources */,
 				EC33BBF72A2B236B00340544 /* ExploreController.swift in Sources */,
 				ECBD7B182A2A983300A9BA9F /* SceneDelegate.swift in Sources */,
 				EC33BBF52A2B22DE00340544 /* FeedController.swift in Sources */,
