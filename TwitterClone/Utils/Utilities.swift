@@ -25,7 +25,7 @@ class Utilities {
         let divider = UIView()
         view.addSubview(divider)
         divider.backgroundColor = .white
-        divider.anchor(left: view.rightAnchor, bottom: view.bottomAnchor, paddingLeft: 8,paddingBottom: 0, height: 10)
+        divider.anchor(left: view.leftAnchor, bottom: view.bottomAnchor,right: view.rightAnchor ,paddingLeft: 8,paddingBottom: 0, height: 0.75)
         return view
     }
     
@@ -35,5 +35,14 @@ class Utilities {
         textField.font = UIFont.systemFont(ofSize: 16)
         textField.attributedPlaceholder  = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
         return textField 
+    }
+    
+    static func attributedButton(_ firstPart: String, _ secondPart: String) -> UIButton {
+        let button = UIButton()
+        let attributedTitle = NSMutableAttributedString(string: firstPart,
+                                                    attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.white])
+        attributedTitle.append(NSAttributedString(string: secondPart, attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 16), NSAttributedString.Key.foregroundColor: UIColor.white]))
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        return button
     }
 }
