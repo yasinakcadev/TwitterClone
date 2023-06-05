@@ -8,8 +8,9 @@
 import UIKit
 
 class RegistrationController: UIViewController {
-    
     //MARK: - Properties
+    private let imagePicker = UIImagePickerController()
+    
     private let uploadPhotoButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(UIImage(named: "plus_photo"), for: .normal)
@@ -96,12 +97,15 @@ class RegistrationController: UIViewController {
     }
     
     @objc func uploadPhoto() {
-        print("upload")
+        present(imagePicker, animated: true)
     }
     
     //MARK: - Helpers
     func configureUI() {
         view.backgroundColor = .twitterBlue
+        
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = true
         
         view.addSubview(uploadPhotoButton)
         uploadPhotoButton.centerX(inView: view, topAnchor: view.safeAreaLayoutGuide.topAnchor, paddingTop: 30)
@@ -118,5 +122,19 @@ class RegistrationController: UIViewController {
         
         view.addSubview(alreadyHaveAccountButton)
         alreadyHaveAccountButton.anchor(left: view.leftAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, right: view.rightAnchor, paddingLeft: 40, paddingRight: 40)
+    }
+}
+
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let profileImage = info[.editedImage] as? UIImage else {return}
+        self.uploadPhotoButton.setImage(profileImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        uploadPhotoButton.layer.cornerRadius = 130 / 2
+        uploadPhotoButton.layer.masksToBounds = true
+        uploadPhotoButton.imageView?.contentMode = .scaleAspectFill
+        uploadPhotoButton.imageView?.clipsToBounds = true
+        uploadPhotoButton.layer.borderColor = UIColor.white.cgColor
+        uploadPhotoButton.layer.borderWidth = 3
+        dismiss(animated: true)
     }
 }
